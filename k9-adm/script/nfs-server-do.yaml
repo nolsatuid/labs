@@ -25,17 +25,22 @@ spec:
         securityContext:
           privileged: true
         volumeMounts:
-          - mountPath: /exports
-            name: mypvc
+          - mountPath: /data1
+            name: mypvc1
           - mountPath: /data2
             name: mypvc2
+          - mountPath: /data3
+            name: mypvc3
       volumes:
-        - name: mypvc
+        - name: mypvc1
           hostPath:
-            path: /data
+            path: /data1
         - name: mypvc2
           hostPath:
             path: /data2
+        - name: mypvc3
+          hostPath:
+            path: /data3
 ---
 kind: Service
 apiVersion: v1
