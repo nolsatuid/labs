@@ -31,6 +31,8 @@ spec:
             name: mypvc2
           - mountPath: /data3
             name: mypvc3
+          - mountPath: /nginx
+            name: nginx-volume
       volumes:
         - name: mypvc1
           hostPath:
@@ -41,6 +43,9 @@ spec:
         - name: mypvc3
           hostPath:
             path: /data3
+        - name: nginx-volume
+          hostPath:
+            path: /nginx-data
 ---
 kind: Service
 apiVersion: v1
