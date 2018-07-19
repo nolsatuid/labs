@@ -45,7 +45,7 @@ spec:
             path: /data3
         - name: nginx-volume
           hostPath:
-            path: /nginx-data
+            path: /nginx
 ---
 kind: Service
 apiVersion: v1
