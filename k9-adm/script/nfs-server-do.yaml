@@ -25,22 +25,22 @@ spec:
         securityContext:
           privileged: true
         volumeMounts:
-          - mountPath: /data1
-            name: mypvc1
-          - mountPath: /data2
-            name: mypvc2
-          - mountPath: /nginx
-            name: nginx-volume
+          - mountPath: /exports/nginx
+            name: nginx
+          - mountPath: /exports/data1
+            name: data1
+          - mountPath: /exports/data2
+            name: data2
       volumes:
-        - name: mypvc1
+        - name: nginx
           hostPath:
-            path: /data1
-        - name: mypvc2
+          path: /nginx
+        - name: data1
           hostPath:
-            path: /data2
-        - name: nginx-volume
+          path: /data1
+        - name: data2
           hostPath:
-            path: /nginx
+          path: /data2
 ---
 kind: Service
 apiVersion: v1
