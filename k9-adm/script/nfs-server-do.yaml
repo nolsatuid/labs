@@ -34,13 +34,13 @@ spec:
       volumes:
         - name: nginx
           hostPath:
-          path: /nginx
+            path: /nginx
         - name: data1
           hostPath:
-          path: /data1
+            path: /data1
         - name: data2
           hostPath:
-          path: /data2
+            path: /data2
 ---
 kind: Service
 apiVersion: v1
