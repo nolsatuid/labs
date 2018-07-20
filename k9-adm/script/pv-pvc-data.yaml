@@ -11,7 +11,7 @@ spec:
   nfs:
     # FIXME: use the right IP
     server: use IP from nfs-server ClusterIP
-    path: "/data1"
+    path: "/exports/data1"
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -25,7 +25,7 @@ spec:
   nfs:
     # FIXME: use the right IP
     server: use IP from nfs-server ClusterIP
-    path: "/data2"
+    path: "/exports/data2"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
