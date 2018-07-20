@@ -10,4 +10,4 @@ spec:
   nfs:
     # FIXME: use the right IP
     server: use IP from nfs-server ClusterIP
-    path: "/nginx"
+    path: "/exports/nginx"
